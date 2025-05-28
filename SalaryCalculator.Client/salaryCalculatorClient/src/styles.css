@@ -1,0 +1,96 @@
+/* כללי */
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  direction: rtl;
+  text-align: right;
+  margin: 0;
+  padding: 0;
+}
+
+/* כרטיס ראשי */
+p-card.shadow-lg {
+  max-width: 800px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  background-color: white;
+}
+
+/* טופס */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* שדה טופס */
+.field {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* קומפוננטות PrimeNG */
+p-select,
+p-inputNumber,
+p-radioButton {
+  width: 100%;
+}
+
+/* קבוצה של כפתורי רדיו */
+.flex.items-center {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.ml-1 {
+  margin-right: 0.5rem;
+}
+
+/* כפתורים */
+p-button.mt-4,
+p-button.w-full {
+  width: 100%;
+  margin-top: 1.5rem;
+}
+
+/* תוצאות */
+.mt-6 {
+  margin-top: 2rem;
+}
+
+.space-y-3 > * + * {
+  margin-top: 1rem;
+}
+
+/* טבלה */
+::ng-deep .p-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+::ng-deep .p-table th,
+::ng-deep .p-table td {
+  border: 1px solid #dee2e6;
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+::ng-deep .p-table th {
+  background-color: #f1f3f5;
+  font-weight: 600;
+}
+
+/* סגנון נוסף לכפתור עריכה */
+p-button[icon="pi pi-pencil"] {
+  width: fit-content;
+  margin-top: 1rem;
+}

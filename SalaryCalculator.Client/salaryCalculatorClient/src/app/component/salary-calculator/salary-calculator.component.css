@@ -1,0 +1,150 @@
+
+/* עיצוב כללי */
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  direction: rtl;
+  text-align: right;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* עיצוב תיבות קלט */
+.field {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* עיצוב כפתורי רדיו */
+.field .flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* כפתורי dropdown / input */
+p-dropdown,
+p-inputNumber {
+  width: 100%;
+}
+
+p-dropdown .p-dropdown-label,
+p-inputNumber input {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+p-inputNumber input:focus,
+p-dropdown .p-dropdown-label:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* כפתורים */
+button {
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* כרטיס ראשי */
+:host ::ng-deep .p-card {
+  border-radius: 1rem;
+  box-shadow: 0 0 12px rgba(201, 7, 7, 0.08);
+  background-color: #ffffff;
+  direction: rtl;
+}
+
+/* טופס */
+:host ::ng-deep form {
+  padding: 1rem 0;
+}
+
+/* שדות טופס */
+:host ::ng-deep .field {
+  display: flex;
+  flex-direction: column;
+}
+
+/* רווחים כלליים בין אלמנטים */
+:host ::ng-deep .space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+/* טבלה */
+:host ::ng-deep .p-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* כותרות טבלה */
+:host ::ng-deep .p-table th {
+  background-color: #f1f5f9;
+  font-weight: bold;
+  padding: 12px;
+  border-left: 1px solid #ccc;
+}
+
+/* תאים בטבלה */
+:host ::ng-deep .p-table td {
+  padding: 10px;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+/* הסרת הגבול מהעמודה הראשונה */
+:host ::ng-deep .p-table td:first-child,
+:host ::ng-deep .p-table th:first-child {
+  border-left: none;
+}
+
+/* כפתור חישוב וכפתור עריכה */
+:host ::ng-deep .p-button {
+  border-radius: 0.75rem;
+  font-weight: bold;
+}
+
+/* כפתור עריכה */
+:host ::ng-deep .mt-4 {
+  margin-top: 1rem;
+}
+
+/* עיצוב הכרטיס של התוצאה */
+:host ::ng-deep .custom-card {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
+}
+
+/* ריווח בין בלוקים בתוצאה */
+:host ::ng-deep .space-y-3 > * + * {
+  margin-top: 0.75rem;
+}
+
+/* יישור לשפה העברית */
+:host {
+  direction: rtl;
+}

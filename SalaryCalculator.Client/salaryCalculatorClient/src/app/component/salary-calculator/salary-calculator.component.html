@@ -1,0 +1,162 @@
+<p-card header="מחשבון העלאת שכר" class="shadow-lg rounded-2xl p-6 bg-white">
+  <form
+    *ngIf="!showResult"
+    (ngSubmit)="calculateSalary()"
+    #salaryForm="ngForm"
+    class="p-fluid space-y-6"
+  >
+    <!-- חלקיות משרה -->
+    <div class="field mb-4">
+      <label for="partTime" class="font-semibold block mb-2">חלקיות משרה</label>
+      <p-select
+      class="p-select"
+        [options]="partTimeOptions"
+        [(ngModel)]="request.PartTime"
+        name="partTime"
+        placeholder="בחר חלקיות משרה"
+        optionLabel="label"
+        optionValue="value"
+      ></p-select>
+    </div>
+
+    <!-- רמה מקצועית -->
+    <div class="field">
+      <label for="jobLevel" class="font-semibold block mb-2">רמה מקצועית</label>
+      <p-select
+      class="p-select"
+        [options]="jobLevelOptions"
+        [(ngModel)]="request.JobLevel"
+        name="jobLevel"
+        placeholder="בחר רמה מקצועית"
+        optionLabel="label"
+        optionValue="value"
+      ></p-select>
+    </div>
+
+    <!-- רמה ניהולית -->
+    <div class="field">
+      <label for="managementLevel" class="font-semibold block mb-2">רמה ניהולית</label>
+      <p-select
+      class="p-select"
+        [options]="managementLevelOptions"
+        [(ngModel)]="request.ManagementLevel"
+        name="managementLevel"
+        placeholder="בחר רמה ניהולית"
+        optionLabel="label"
+        optionValue="value"
+      ></p-select>
+    </div>
+
+    <!-- שנות וותק -->
+    <div class="field">
+      <label for="seniorityYears" class="font-semibold block mb-2">שנות וותק</label>
+      <p-inputNumber
+        [(ngModel)]="request.SeniorityYears"
+        name="seniorityYears"
+        inputId="seniorityYears"
+        [min]="0"
+        [max]="50"
+      ></p-inputNumber>
+    </div>
+
+    <!-- זכאות לעבודה בחוק -->
+    <div class="field">
+      <label class="font-semibold block mb-2">זכאי לתוספת עבודה בחוק?</label>
+      <div class="flex items-center gap-4">
+        <div>
+          <p-radioButton
+            name="isLawWorkBonusEligible"
+            [value]="true"
+            [(ngModel)]="request.IsLawWorkBonusEligible"
+            inputId="yes"
+          ></p-radioButton>
+          <label for="yes" class="ml-1">כן</label>
+        </div>
+        <div>
+          <p-radioButton
+            
+            name="isLawWorkBonusEligible"
+            [value]="false"
+            [(ngModel)]="request.IsLawWorkBonusEligible"
+            inputId="no"
+          ></p-radioButton>
+          <label for="no" class="ml-1">לא</label>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- קבוצה אם זכאי -->
+    <div class="field" *ngIf="request.IsLawWorkBonusEligible">
+      <label for="workGroup" class="font-semibold block mb-2">קבוצה</label>
+      <p-select
+      class="p-select"
+        [options]="lawWorkGroupOptions"
+        [(ngModel)]="request.LawWorkGroup"
+        name="workGroup"
+        placeholder="בחר קבוצה"
+        optionLabel="label"
+        optionValue="value"
+      ></p-select>
+    </div>
+
+    <!-- כפתור שליחה -->
+    <p-button
+      label="חשב את השכר שלי"
+      type="submit"
+      icon="pi pi-calculator"
+      class="w-full mt-4"
+    ></p-button>
+  </form>
+
+  <!-- תוצאות -->
+  <div *ngIf="showResult" class="mt-6 space-y-3">
+    <p-card header="שכר בסיס חדש" styleClass="custom-card">
+      <p-table [value]="[result]">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>שכר בסיס חדש</th>
+            <th>תוספת העלאת שכר</th>
+            <th>שיעור העלאת שכר</th>
+            <th>סכ״ש בסיסי לפני העלאה</th>
+            <th>תוספת עבודה מתוקף חיקוק</th>
+            <th>זכאי לתוספת?</th>
+            <th>קבוצה</th>
+            <th>תוספת ותק</th>
+            <th>שיעור ותק</th>
+            <th>שנות ותק</th>
+            <th>שכר יסוד</th>
+            <th>רמה ניהולית</th>
+            <th>רמה מקצועית</th>
+            <th>חלקיות</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-rowData>
+          <tr>
+            <td>{{ rowData.newBaseSalary | currency: 'ILS':'symbol':'1.2-2' }}</td>
+            <td>{{ rowData.raiseAmount | currency: 'ILS':'symbol':'1.2-2' }}</td>
+            <td>{{ rowData.raisePercent }}%</td>
+            <td>{{ rowData.totalBaseSalary | currency: 'ILS':'symbol':'1.2-2' }}</td>
+            <td>{{ rowData.lawWorkBonusAmount | currency: 'ILS':'symbol':'1.2-2' }}</td>
+            <td>{{ request.IsLawWorkBonusEligible ? 'כן' : 'לא' }}</td>
+            <td>{{ request.LawWorkGroup === 0 ? 'קבוצה א׳' : 'קבוצה ב׳' }}</td>
+            <td>{{ rowData.seniorityBonusAmount | currency: 'ILS':'symbol':'1.2-2' }}</td>
+            <td>{{ rowData.seniorityBonusPercent }}%</td>
+            <td>{{ request.SeniorityYears }}</td>
+            <td>{{ rowData.baseSalary | currency: 'ILS':'symbol':'1.2-2' }}</td>
+            <td>{{ request.ManagementLevel }}</td>
+            <td>{{ request.JobLevel }}</td>
+            <td>{{ request.PartTime }}%</td>
+          </tr>
+        </ng-template>
+      </p-table>
+
+      <p-button
+        label="ערוך נתונים"
+        icon="pi pi-pencil"
+        (onClick)="edit()"
+        class="mt-4"
+      ></p-button>
+    </p-card>
+  </div>
+</p-card>

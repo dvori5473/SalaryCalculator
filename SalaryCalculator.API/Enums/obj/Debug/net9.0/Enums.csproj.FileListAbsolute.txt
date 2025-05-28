@@ -1,0 +1,11 @@
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\bin\Debug\net9.0\Enums.deps.json
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\bin\Debug\net9.0\Enums.dll
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\bin\Debug\net9.0\Enums.pdb
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\obj\Debug\net9.0\Enums.GeneratedMSBuildEditorConfig.editorconfig
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\obj\Debug\net9.0\Enums.AssemblyInfoInputs.cache
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\obj\Debug\net9.0\Enums.AssemblyInfo.cs
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\obj\Debug\net9.0\Enums.csproj.CoreCompileInputs.cache
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\obj\Debug\net9.0\Enums.dll
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\obj\Debug\net9.0\refint\Enums.dll
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\obj\Debug\net9.0\Enums.pdb
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Enums\obj\Debug\net9.0\ref\Enums.dll

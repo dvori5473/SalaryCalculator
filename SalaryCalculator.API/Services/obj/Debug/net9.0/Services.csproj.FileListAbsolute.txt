@@ -1,0 +1,17 @@
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\bin\Debug\net9.0\Services.deps.json
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\bin\Debug\net9.0\Services.dll
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\bin\Debug\net9.0\Services.pdb
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\bin\Debug\net9.0\DTOs.dll
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\bin\Debug\net9.0\Enums.dll
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\bin\Debug\net9.0\DTOs.pdb
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\bin\Debug\net9.0\Enums.pdb
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\Services.csproj.AssemblyReference.cache
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\Services.AssemblyInfoInputs.cache
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\Services.AssemblyInfo.cs
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\Services.csproj.CoreCompileInputs.cache
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\Services.csproj.Up2Date
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\Services.dll
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\refint\Services.dll
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\Services.pdb
+D:\פרוייקטים\SalaryCalculatorSolution\SalaryCalculator.API\Services\obj\Debug\net9.0\ref\Services.dll
